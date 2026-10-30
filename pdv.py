@@ -9,7 +9,6 @@ while True:
     escolha = int(input("\nDigite a opcão de escolha: ")) 
     if escolha == 1:
         valordacompra = float(input("\nDigite o valor da compra: R$"))
-        listadecompras.append(valordacompra)
         idade = int(input("Digite sua idade: "))
         if idade <= 0 or valordacompra <= 0:
             print("O valor digitado é inválido, tente novamente")
@@ -31,6 +30,7 @@ while True:
                 elif desconto == valordacompra*0:
                     print(f"O valor sem desconto foi R${valordacompra:.2f}")
             desconto_total = valordacompra - valorfinal
+            listadecompras.append(valordacompra)
             descontos.append(desconto_total)
             Valorfinal.append(valorfinal)      
                
