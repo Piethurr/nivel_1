@@ -17,14 +17,12 @@ while True:
         else:
             if idade >= 65:
                 desconto = valordacompra*0.2
-                descontos.append(desconto)
                 valorfinal = valordacompra - desconto #20% de desconto
             elif idade < 65:
                 desconto = valordacompra*0
                 valorfinal = valordacompra - desconto #0% de desconto
             if valorfinal > 100: 
                 desconto = (valorfinal*0.1)
-                descontos.append(desconto)
                 valorfinal = valorfinal - desconto
                 print(f"O valor com desconto aplicado foi R${valorfinal:.2f}")
             else:
@@ -32,7 +30,10 @@ while True:
                     print(f"O valor com desconto aplicado foi R${valorfinal:.2f}")
                 elif desconto == valordacompra*0:
                     print(f"O valor sem desconto foi R${valordacompra:.2f}")
-            Valorfinal.append(valorfinal)         
+            desconto_total = valordacompra - valorfinal
+            descontos.append(desconto_total)
+            Valorfinal.append(valorfinal)      
+               
     
     elif escolha == 0:
         print("\n================RESUMO DO DIA=================")
