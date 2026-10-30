@@ -13,6 +13,7 @@ while True:
         idade = int(input("Digite sua idade: "))
         if idade <= 0 or valordacompra <= 0:
             print("O valor digitado é inválido, tente novamente")
+            continue
         else:
             if idade >= 65:
                 desconto = valordacompra*0.2
